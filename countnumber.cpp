@@ -1,27 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+int count (int n )
 {
-    
-    int n;
-    cout<<"enter a number ";
-    cin>>n;
-    int count=0;
+    int cnt=0;
     int lastdigit;
 
     while(n>0)
     {
         lastdigit=n%10;
-        count=count+1;
+        cnt=cnt+1;
         cout<<lastdigit<<endl;
 
 
         n=n/10;
 
     }
-    cout <<"total digit "<< count<< endl;
+    cout <<"total digit "<< cnt<< endl;
+    return cnt;
+
+
+}
+int main()
+{
+    
+    int n;
+    cout<<"enter a number ";
+    cin>>n;
+    count(n);
     return 0;
+
 
 }
 
